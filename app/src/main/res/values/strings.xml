@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Escalapp_v3</string>
+    <string name="password">Senha:</string>
+    <string name="cpf">CPF:</string>
+    <string name="forgot_password">Esqueceu a senha?</string>
+    <string name="entrar">ENTRAR</string>
 </resources>
