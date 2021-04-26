@@ -4,4 +4,10 @@
     <string name="cpf">CPF:</string>
     <string name="forgot_password">Esqueceu a senha?</string>
     <string name="entrar">ENTRAR</string>
+    <string name="cpf_digite">Digite o seu CPF</string>
+    <string name="dt_nasc">Data de Nascimento</string>
+    <string name="dt_admso">Data de Admissão</string>
+    <string name="new_password">Nova Senha:</string>
+    <string name="confirm_password">Confirme a Senha:</string>
+    <string name="save">SALVAR</string>
 </resources>

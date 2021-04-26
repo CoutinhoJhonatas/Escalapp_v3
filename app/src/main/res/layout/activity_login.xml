@@ -32,8 +32,8 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/txt_credentials"
-        android:layout_width="245dp"
-        android:layout_height="48dp"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/bg_edittext_normal"
         android:cursorVisible="true"
@@ -53,8 +53,8 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/txt_password"
-        android:layout_width="245dp"
-        android:layout_height="48dp"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
         android:layout_marginTop="22dp"
         android:background="@drawable/bg_edittext_normal"
         android:cursorVisible="true"
@@ -65,8 +65,6 @@
         android:paddingEnd="18dp"
         android:textColor="@android:color/black"
         android:textColorHint="@color/black_clear"
-        android:textColorLink="@color/purple_500"
-        android:textCursorDrawable="@color/black_clear"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
