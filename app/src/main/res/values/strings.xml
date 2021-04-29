@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Escalapp</string>
+<string name="app_name">Escalapp</string>
     <string name="menu_principal">Menu Principal</string>
     <string name="menu_home">Home</string>
     <string name="menu_folgas">Folgas</string>
@@ -14,4 +14,15 @@
     values-round/strings.xml for round devices.
     -->
     <string name="hello_world">Hello Square World!</string>
+    <string name="app_name">Escalapp_v3</string>
+    <string name="password">Senha:</string>
+    <string name="cpf">CPF:</string>
+    <string name="forgot_password">Esqueceu a senha?</string>
+    <string name="entrar">ENTRAR</string>
+    <string name="cpf_digite">Digite o seu CPF</string>
+    <string name="dt_nasc">Data de Nascimento</string>
+    <string name="dt_admso">Data de Admissão</string>
+    <string name="new_password">Nova Senha:</string>
+    <string name="confirm_password">Confirme a Senha:</string>
+    <string name="save">SALVAR</string>
 </resources>

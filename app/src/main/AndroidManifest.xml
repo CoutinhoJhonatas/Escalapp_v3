@@ -11,8 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Escalapp_v3">
 
-
         <activity android:name=".splashScreen">
+
+        <activity
+            android:name=".RecuperarSenha"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +31,6 @@
             <activity android:name=".MainAdmActivity">
 
         </activity>
-
     </application>
 
 </manifest>
