@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.escalapp_v3">
 
     <application
@@ -9,6 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Escalapp_v3">
+
+        <activity android:name=".splashScreen">
+
         <activity
             android:name=".RecuperarSenha"
             android:screenOrientation="portrait">
@@ -22,7 +26,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".MainActivity"></activity>
+            <activity android:name=".MainAdmActivity">
+
+        </activity>
     </application>
 
 </manifest>

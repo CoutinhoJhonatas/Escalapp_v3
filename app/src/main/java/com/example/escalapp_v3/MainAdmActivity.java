@@ -9,7 +9,7 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainAdmActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                             break;
 
                         case R.id.maisFragment:
-                            selectedFragment = new maisFragment();
+                            selectedFragment = new menuAdmFragment();
                             break;
                     }
 
