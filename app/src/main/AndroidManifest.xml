@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.escalapp_v3">
+    package="com.example.escalapp_v3"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="30" />
 
     <application
         android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Escalapp_v3">
-
-        <activity android:name=".splashScreen">
-
-        <activity
-            android:name=".RecuperarSenha"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity
-            android:name=".Login"
-            android:screenOrientation="portrait">
+        android:testOnly="true"
+        android:theme="@style/Theme.Escalapp_v3" >
+        <activity android:name="com.example.escalapp_v3.splashScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,9 +26,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity"></activity>
-            <activity android:name=".MainAdmActivity">
+        <activity
+            android:name=".RecuperarSenha"
+            android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.example.escalapp_v3.MainActivity" />
+        <activity android:name="com.example.escalapp_v3.MainAdmActivity" >
         </activity>
     </application>
 
