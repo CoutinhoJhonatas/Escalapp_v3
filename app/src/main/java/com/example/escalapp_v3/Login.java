@@ -11,9 +11,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
+    /* Usuario
+    Login: 123
+    Senha: 123
+     */
 
-    //Login: 123
-    //Senha: 123
+    /* Adm
+    Login: 456
+    Senha: 456
+     */
 
     Button btnEntrar;
     AppCompatEditText txtCpf, txtSenha;
@@ -53,6 +59,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
                 Intent telaMain = new Intent(this, MainActivity.class);
                 startActivity(telaMain);
+            }
+
+            if (cpf == 456 && senha == 456) {
+
+                Intent telaMainAdm = new Intent(this, MainAdmActivity.class);
+                startActivity(telaMainAdm);
             }
 
         }
