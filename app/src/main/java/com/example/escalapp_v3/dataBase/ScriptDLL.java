@@ -3,7 +3,7 @@ package com.example.escalapp_v3.dataBase;
 public class ScriptDLL {
 
     public static String getCreateTableADM() {
-
+        //strutura do banco Administrador
         StringBuilder sql = new StringBuilder();
 
         sql.append("CREATE TABLE ADM ( ");
@@ -16,7 +16,7 @@ public class ScriptDLL {
 
         return sql.toString();
     }
-
+        //Estrutura do banco de Atividades
     public static String getCreateTableAtividades() {
 
         StringBuilder sql = new StringBuilder();
@@ -29,7 +29,7 @@ public class ScriptDLL {
 
         return sql.toString();
     }
-
+        //Estrutura do Banco de Funcionários
     public static String getCreateTableFuncionario() {
 
         StringBuilder sql = new StringBuilder();
@@ -45,7 +45,7 @@ public class ScriptDLL {
 
         return sql.toString();
     }
-
+        //Estrutura do banco do gerente
     public static String getCreateTableGerente() {
 
         StringBuilder sql = new StringBuilder();
