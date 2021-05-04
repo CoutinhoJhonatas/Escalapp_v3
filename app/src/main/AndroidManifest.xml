@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.escalapp_v3"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -17,26 +17,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.Escalapp_v3" >
-        <activity android:name="com.example.escalapp_v3.splashScreen" >
+        android:theme="@style/Theme.Escalapp_v3">
+        <activity android:name=".atividades.AtividadesActivity"></activity>
+        <activity android:name=".splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".RecuperarSenha"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".Login"
             android:screenOrientation="portrait" />
-
-        <activity android:name="com.example.escalapp_v3.MainActivity" />
-        <activity android:name="com.example.escalapp_v3.MainAdmActivity" >
-        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".MainAdmActivity"></activity>
     </application>
 
 </manifest>
