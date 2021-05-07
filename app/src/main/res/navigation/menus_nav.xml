@@ -7,27 +7,27 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.escalapp_v3.homeFragment"
+        android:name="com.example.escalapp_v3.fragments.homeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/folgasFragment"
-        android:name="com.example.escalapp_v3.folgasFragment"
+        android:name="com.example.escalapp_v3.fragments.folgasFragment"
         android:label="fragment_folgas"
         tools:layout="@layout/fragment_folgas" />
     <fragment
         android:id="@+id/atividadesFragment"
-        android:name="com.example.escalapp_v3.atividadesFragment"
+        android:name="com.example.escalapp_v3.fragments.atividadesFragment"
         android:label="fragment_atividades"
         tools:layout="@layout/fragment_atividades" />
     <fragment
         android:id="@+id/maisFragment"
-        android:name="com.example.escalapp_v3.maisFragment"
+        android:name="com.example.escalapp_v3.fragments.maisFragment"
         android:label="fragment_mais"
         tools:layout="@layout/fragment_mais" />
     <fragment
         android:id="@+id/menuAdmFragment"
-        android:name="com.example.escalapp_v3.menuAdmFragment"
+        android:name="com.example.escalapp_v3.fragments.menuAdmFragment"
         android:label="fragment_menu_adm"
         tools:layout="@layout/fragment_menu_adm" />
 </navigation>
