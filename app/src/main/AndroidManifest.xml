@@ -18,8 +18,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Escalapp_v3">
-        <activity android:name=".atividades.AtividadesActivity"></activity>
+        <activity android:name=".AtividadesActivity"></activity>
         <activity android:name=".splashScreen">
+        <activity android:name=".BancoOpenHelper"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

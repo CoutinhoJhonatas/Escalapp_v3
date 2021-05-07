@@ -1,66 +1,47 @@
 package com.example.escalapp_v3.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.example.escalapp_v3.R;
+import com.example.escalapp_v3.AtividadesActivity;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link menuAdmFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class menuAdmFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public menuAdmFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment menuAdmFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static menuAdmFragment newInstance(String param1, String param2) {
-        menuAdmFragment fragment = new menuAdmFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+public class menuAdmFragment extends Fragment implements View.OnClickListener {
+    private CardView AdmCardCont, AdmCardPassword, AdmCardFunc, AdmCardAtividades;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+
+        //Definindo os Cards
+        AdmCardCont = (CardView) AdmCardCont.findViewById(R.id.adm_cardCont);
+        AdmCardPassword = (CardView) AdmCardPassword.findViewById(R.id.adm_cardPassword);
+        AdmCardFunc = (CardView) AdmCardFunc.findViewById(R.id.adm_cardFunc);
+        AdmCardAtividades = (CardView) AdmCardAtividades.findViewById(R.id.adm_cardAtividades);
+
+        //Adicionando os Click Listenner aos cards
+        AdmCardCont.setOnClickListener(this);
+        AdmCardPassword.setOnClickListener(this);
+        AdmCardFunc.setOnClickListener(this);
+        AdmCardAtividades.setOnClickListener(this);
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        Intent i;
+
+        switch (v.getId()) {
+            case R.id.adm_cardAtividades: i = new Intent(this,AtividadesActivity.class);
+            startActivity(i);
+            break;
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu_adm, container, false);
-    }
 }

@@ -1,4 +1,4 @@
-package com.example.escalapp_v3.atividades;
+package com.example.escalapp_v3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
