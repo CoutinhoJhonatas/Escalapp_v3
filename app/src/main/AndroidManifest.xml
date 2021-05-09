@@ -18,9 +18,11 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Escalapp_v3">
-        <activity android:name=".AtividadesActivity"></activity>
+        <activity android:name=".activity.Activity_list_atividades"></activity>
+        <activity android:name=".AtividadesActivity" />
         <activity android:name=".splashScreen">
-        <activity android:name=".BancoOpenHelper"/>
+            <activity android:name=".BancoOpenHelper" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,7 +36,7 @@
             android:name=".Login"
             android:screenOrientation="portrait" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".MainAdmActivity"></activity>
+        <activity android:name=".MainAdmActivity" />
     </application>
 
 </manifest>
