@@ -11,15 +11,16 @@ import android.view.View;
 
 import com.example.escalapp_v3.R;
 import com.example.escalapp_v3.AtividadesActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class menuAdmFragment extends Fragment implements View.OnClickListener {
     private CardView AdmCardCont, AdmCardPassword, AdmCardFunc, AdmCardAtividades;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
 
         //Definindo os Cards
+        super.onCreate(savedInstanceState);
         AdmCardCont = (CardView) AdmCardCont.findViewById(R.id.adm_cardCont);
         AdmCardPassword = (CardView) AdmCardPassword.findViewById(R.id.adm_cardPassword);
         AdmCardFunc = (CardView) AdmCardFunc.findViewById(R.id.adm_cardFunc);
@@ -32,16 +33,14 @@ public class menuAdmFragment extends Fragment implements View.OnClickListener {
         AdmCardAtividades.setOnClickListener(this);
     }
 
-
     @Override
     public void onClick(View v) {
         Intent i;
 
         switch (v.getId()) {
-            case R.id.adm_cardAtividades: i = new Intent(this,AtividadesActivity.class);
+            case R.id.adm_cardAtividades: i = new Intent(menuAdmFragment.this,atividadesFragment.class);
             startActivity(i);
             break;
         }
     }
-
 }
