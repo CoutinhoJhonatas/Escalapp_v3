@@ -28,10 +28,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+          
         </activity>
+      
         <activity
             android:name=".RecuperarSenha"
             android:screenOrientation="portrait" />
+      
         <activity
             android:name=".Login"
             android:screenOrientation="portrait" />
@@ -39,6 +42,8 @@
         <activity android:name=".AtividadesActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MainAdmActivity" />
+        <activity android:name=".activity.Activity_list_atividades"></activity>
+          
     </application>
 
 </manifest>
