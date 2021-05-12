@@ -13,7 +13,7 @@ public class BancoOpenHelper extends SQLiteOpenHelper {
     private static final String NOME_BANCO = "banco.db";
     private static final String TABELA = "atividades";
     private static final String ID = "id_ativ";
-    private static final int VERSAO = 1;
+    private static final int VERSAO = 5;
 
     public BancoOpenHelper(Context context){
         super(context, NOME_BANCO,null,VERSAO);

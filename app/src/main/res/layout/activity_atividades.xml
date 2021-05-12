@@ -103,7 +103,6 @@
         android:layout_height="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="50dp"
-        android:backgroundTint="none"
         app:layout_constraintEnd_toStartOf="@+id/AtividadesIcon"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
