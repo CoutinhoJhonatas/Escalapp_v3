@@ -18,7 +18,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Escalapp_v3">
-        <activity android:name=".dataBase.AlterarSenha"></activity>
+        <activity android:name=".dataBase.CadastrarFuncionario"></activity>
+        <activity android:name=".dataBase.AlterarSenha" />
         <activity android:name=".splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +34,7 @@
             android:name=".Login"
             android:screenOrientation="portrait" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".MainAdmActivity"></activity>
+        <activity android:name=".MainAdmActivity" />
     </application>
 
 </manifest>
