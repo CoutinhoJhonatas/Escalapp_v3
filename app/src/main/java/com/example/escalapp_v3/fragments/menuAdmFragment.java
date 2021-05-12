@@ -26,21 +26,26 @@ public class menuAdmFragment extends Fragment implements View.OnClickListener {
         AdmCardFunc = (CardView) AdmCardFunc.findViewById(R.id.adm_cardFunc);
         AdmCardAtividades = (CardView) AdmCardAtividades.findViewById(R.id.adm_cardAtividades);
 
+
         //Adicionando os Click Listenner aos cards
         AdmCardCont.setOnClickListener(this);
         AdmCardPassword.setOnClickListener(this);
         AdmCardFunc.setOnClickListener(this);
         AdmCardAtividades.setOnClickListener(this);
+
     }
+
 
     @Override
     public void onClick(View v) {
-        Intent i;
 
         switch (v.getId()) {
-            case R.id.adm_cardAtividades: i = new Intent(menuAdmFragment.this,atividadesFragment.class);
+
+            Intent i;
+            case R.id.adm_cardAtividades: i = new Intent(this, AtividadesActivity.class);
             startActivity(i);
             break;
         }
     }
+     */
 }

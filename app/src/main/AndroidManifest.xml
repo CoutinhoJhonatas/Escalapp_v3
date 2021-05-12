@@ -23,11 +23,7 @@
 
         <activity android:name=".splashScreen">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
           
         </activity>
       
@@ -42,7 +38,13 @@
         <activity android:name=".AtividadesActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MainAdmActivity" />
-        <activity android:name=".activity.Activity_list_atividades"></activity>
+        <activity android:name=".activity.Activity_list_atividades">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
           
     </application>
 
