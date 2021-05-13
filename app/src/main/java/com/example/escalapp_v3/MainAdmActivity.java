@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import com.example.escalapp_v3.fragments.atividadesFragment;
 import com.example.escalapp_v3.fragments.folgasFragment;
 import com.example.escalapp_v3.fragments.homeFragment;
-import com.example.escalapp_v3.fragments.menuAdmFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainAdmActivity extends AppCompatActivity {
