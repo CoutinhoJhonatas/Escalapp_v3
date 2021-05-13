@@ -20,7 +20,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Escalapp_v3"
         tools:ignore="HardcodedDebugMode">
-        <activity android:name=".MyAccount"></activity>
+        <activity android:name=".folgas"></activity>
+        <activity android:name=".mnFuncionario" />
+        <activity android:name=".MyAccount" />
         <activity android:name=".AdcFuncionario" />
         <activity android:name=".mnAdmActivity" />
         <activity android:name=".splashScreen">

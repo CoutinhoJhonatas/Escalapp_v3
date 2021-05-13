@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.Activity_list_atividades">
+    tools:context=".folgas">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -17,16 +17,19 @@
         app:menu="@menu/menu"
         tools:layout_editor_absoluteX="0dp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerList"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="415dp"
+        android:layout_height="66dp"
+        android:background="@color/red"
+        android:text=" Em Breve"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="50dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

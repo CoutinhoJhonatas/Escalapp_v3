@@ -1,32 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.homeFragment"
-    android:background="@color/grey">
+    tools:context=".mnFuncionario"
+    android:backgroundTint="@color/grey">
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        app:itemIconTint="@color/nav_color"
+        app:itemTextColor="@color/nav_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <!-- Pocisionando os Cards no Grid 2x1-->
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="523dp"
+        android:layout_height="363dp"
         android:layout_gravity="center"
         android:layout_weight="6"
         android:columnCount="1"
-        android:rowCount="2">
+        android:rowCount="2"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!--Card Quadro de Folgas-->
+        <!--Card Minha Conta-->
         <androidx.cardview.widget.CardView
 
-            android:id="@+id/cardFolgas"
+            android:id="@+id/cardCont"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="0.5"
             android:layout_columnWeight="1"
             android:layout_margin="15dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="15dp">
+            app:cardCornerRadius="15dp"
+            app:cardElevation="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -37,8 +52,8 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:layout_marginTop="5dp"
                     android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
                     android:src="@drawable/my_info" />
 
                 <LinearLayout
@@ -49,9 +64,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_marginTop="5dp"
-                        android:text="Quadro de Folgas"
+                        android:text="Minha Conta"
                         android:textColor="@color/black"
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -59,70 +74,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_marginTop="5dp"
-                        android:text="Consulte suas Folgas Aqui"
-                        android:textSize="15sp" />
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="15dp"
-                    android:src="@drawable/wing_icon" />
-
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <!--Card Atividades-->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardAtividades"
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="0.45"
-            android:layout_columnWeight="1"
-            android:layout_margin="15dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="15dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="20dp"
-                    android:src="@drawable/atividades" />
-
-                <LinearLayout
-                    android:layout_width="204dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="166dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="1dp"
-                        android:text="Atividades"
-                        android:textColor="@color/black"
-                        android:textSize="25sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="5dp"
-                        android:text="Consulte as atividades Pendentes aqui"
+                        android:text="Consulte suas Informações"
                         android:textSize="15sp" />
                 </LinearLayout>
 
@@ -138,17 +92,17 @@
 
         </androidx.cardview.widget.CardView>
 
-        <!--Card Menu-->
+        <!--Card Trocar Senha-->
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardMenu"
+            android:id="@+id/cardPassword"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="0.45"
             android:layout_columnWeight="1"
             android:layout_margin="15dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="15dp">
+            app:cardCornerRadius="15dp"
+            app:cardElevation="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -160,7 +114,7 @@
                     android:layout_width="60dp"
                     android:layout_height="70dp"
                     android:layout_marginLeft="20dp"
-                    android:src="@drawable/menu_icon" />
+                    android:src="@drawable/edit_info" />
 
                 <LinearLayout
                     android:layout_width="204dp"
@@ -170,9 +124,9 @@
                     <TextView
                         android:layout_width="166dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_marginTop="5dp"
-                        android:text="Menu"
+                        android:text="Trocar Senha"
                         android:textColor="@color/black"
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -180,9 +134,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_marginTop="5dp"
-                        android:text="Edite suas configurações"
+                        android:text="Altere sua Senha Aqui"
                         android:textSize="15sp" />
                 </LinearLayout>
 
@@ -201,4 +155,5 @@
 
     </GridLayout>
 
-</FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
