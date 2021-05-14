@@ -20,30 +20,41 @@
         android:testOnly="true"
         android:theme="@style/Theme.Escalapp_v3"
         tools:ignore="HardcodedDebugMode">
-        <activity android:name=".ListFunc"/>
-        <activity android:name=".folgas"></activity>
-        <activity android:name=".mnFuncionario" />
-        <activity android:name=".MyAccount" />
-        <activity android:name=".AdcFuncionario" />
-        <activity android:name=".mnAdmActivity" />
+
         <activity android:name=".splashScreen">
+          
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+      
         <activity
             android:name=".RecuperarSenha"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Login"
             android:screenOrientation="portrait" />
-        <activity android:name=".dataBase.AlterarSenha" />
-        <activity android:name=".AtividadesActivity" />
+
         <activity android:name=".MainActivity" />
         <activity android:name=".MainAdmActivity" />
+        <activity android:name=".AtividadesActivity" />
         <activity android:name=".activity.Activity_list_atividades" />
+
+        <activity android:name=".folgas" />
+        <activity android:name=".mnFuncionario" />
+        <activity android:name=".MyAccount" />
+        <activity android:name=".AdcFuncionario" />
+        <activity android:name=".mnAdmActivity" />
+        <activity android:name=".dataBase.AlterarSenha" />
+        <activity android:name=".ListFunc"/>
+        <activity android:name=".folgas"></activity>
+        <activity android:name=".mnFuncionario" />
+        <activity android:name=".MyAccount" />
+        <activity android:name=".AdcFuncionario" />
+        <activity android:name=".mnAdmActivity" />
+
 
     </application>
 
