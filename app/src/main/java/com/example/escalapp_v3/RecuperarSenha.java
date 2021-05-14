@@ -1,8 +1,11 @@
 package com.example.escalapp_v3;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatEditText;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,5 +32,28 @@ public class RecuperarSenha extends AppCompatActivity implements View.OnClickLis
 
     public void onClick(View v) {
 
+        if (v.getId() == R.id.btn_save) {
+
+            Intent telaLogin = new Intent(this, Login.class);
+
+            //Instanciar AlertDialog
+            AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+
+            //Configurar titulo e mensagem
+            dialog.setMessage("Cadastro Atualizado");
+
+            //Configura acoes para sim e nao
+            dialog.setPositiveButton("Entendi", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                    startActivity(telaLogin);
+                }
+            });
+
+            //Criar e exibir AlertDialog
+            dialog.create();
+            dialog.show();
+        }
     }
 }

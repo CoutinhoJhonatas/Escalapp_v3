@@ -49,9 +49,6 @@ public class MainAdmActivity extends AppCompatActivity {
                             selectedFragment = new atividadesFragment();
                             break;
 
-                        case R.id.maisFragment:
-                            selectedFragment = new menuAdmFragment();
-                            break;
                     }
 
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

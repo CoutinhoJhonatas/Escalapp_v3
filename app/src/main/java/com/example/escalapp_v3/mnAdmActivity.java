@@ -32,20 +32,25 @@ public class mnAdmActivity extends AppCompatActivity {
         Intent i;
 
         switch (v.getId()) {
-            case R.id.adm_cardAtividades: i = new Intent (this, AtividadesActivity.class);
-            startActivity(i);
-            break;
+            case R.id.adm_cardAtividades:
+                i = new Intent(this, AtividadesActivity.class);
+                startActivity(i);
+                break;
 
-            case R.id.adm_cardCont: i = new Intent(this, RecuperarSenha.class);
-            startActivity(i);
-            break;
+            case R.id.adm_cardCont:
+                i = new Intent(this, RecuperarSenha.class);
+                startActivity(i);
+                break;
 
-            case R.id.adm_cardPassword: i = new Intent(this, RecuperarSenha.class);
-            startActivity(i);
-            break;
+            case R.id.adm_cardPassword:
+                i = new Intent(this, RecuperarSenha.class);
+                startActivity(i);
+                break;
 
-            case R.id.adm_cardFunc: i = new Intent(this, RecuperarSenha.class);
-            startActivity(i);
-            break;
+            case R.id.adm_cardFunc:
+                i = new Intent(this, RecuperarSenha.class);
+                startActivity(i);
+                break;
         }
+    }
 }
