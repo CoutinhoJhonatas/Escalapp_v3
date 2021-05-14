@@ -12,7 +12,7 @@
         android:icon="@drawable/ic_calendario_foreground"/>
 
     <item
-        android:id="@+id/atividadesFragment"
+        android:id="@+id/tarefasFragment"
         android:title="@string/menu_tarefas"
         android:icon="@drawable/ic_atividades_foreground"/>
 

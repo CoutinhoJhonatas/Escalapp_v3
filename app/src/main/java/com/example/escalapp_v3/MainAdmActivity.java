@@ -4,57 +4,46 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
+import com.example.escalapp_v3.model.Atividades;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainAdmActivity extends AppCompatActivity {
+
+    // Estrutura para navegar entre telas
+
+    Button btnHome, btnFolga, btnTarefas, btnMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Ocultar a Action Bar
-
-        //iniciando o menu para trocar entre as telas
-        BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
-        bottomNav.setOnNavigationItemSelectedListener(navListener);
-
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new homeFragment()).commit();
+        //homeFragment, folgasFragment... foram criados para navegação usando Fragment mas deu errado, porem recliclei os id criados para declarar aqui
+        btnHome = (Button) findViewById(R.id.homeFragment);
+        btnFolga = (Button) findViewById(R.id.folgasFragment);
+        btnTarefas = (Button) findViewById(R.id.tarefasFragment);
+        btnMenu = (Button) findViewById(R.id.maisFragment);
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
-            new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    Fragment selectedFragment = null;
+    //Aqui eu coloco o comando que seria (activity onde estamos).this e depois a activity que queremos abrir
+    public void BtnFolga(View v){
+        Intent in = new Intent(MainAdmActivity.this, folgas.class);
+        startActivity(in);
+    }
 
-                    switch (item.getItemId()) {
+    public void BtnTarefas(View v){
+        Intent in = new Intent(MainAdmActivity.this, Atividades.class);
+        startActivity(in);
+    }
 
-                        case R.id.homeFragment:
-                            selectedFragment = new homeFragment();
-                            break;
-
-                        case R.id.folgasFragment:
-                            selectedFragment = new folgasFragment();
-                            break;
-
-                        case R.id.atividadesFragment:
-                            selectedFragment = new atividadesFragment();
-                            break;
-
-                        case R.id.maisFragment:
-                            selectedFragment = new menuAdmFragment();
-                            break;
-                    }
-
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                            selectedFragment).commit();
-
-                    return true;
-                }
-            };
+    public void BtnMenu(View v){
+        Intent in = new Intent(MainAdmActivity.this, mnAdmActivity.class);
+        startActivity(in);
+    }
 }

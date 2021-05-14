@@ -11,6 +11,7 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:layout_marginBottom="4dp"
         android:background="@color/white"
         app:itemIconTint="@color/nav_color"
         app:itemTextColor="@color/nav_color"
@@ -26,7 +27,8 @@
         android:columnCount="1"
         android:rowCount="2"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp">
 
         <!--Card Quadro de Folgas-->
         <androidx.cardview.widget.CardView
