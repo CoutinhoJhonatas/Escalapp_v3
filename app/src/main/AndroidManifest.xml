@@ -20,6 +20,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.Escalapp_v3"
         tools:ignore="HardcodedDebugMode">
+        <activity android:name=".ListFunc"/>
         <activity android:name=".folgas"></activity>
         <activity android:name=".mnFuncionario" />
         <activity android:name=".MyAccount" />
@@ -43,6 +44,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".MainAdmActivity" />
         <activity android:name=".activity.Activity_list_atividades" />
+
     </application>
 
 </manifest>
