@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        tools:context=".RecuperarSenha">
+
+        <ImageView
+            android:id="@+id/img_login"
+            android:layout_width="170dp"
+            android:layout_height="164dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_escalapp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txt_dgt_cpf"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/bg_edittext_normal"
+            android:cursorVisible="true"
+            android:hint="@string/cpf_digite"
+            android:inputType="number"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/black_clear"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_login" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txt_dt_nasc"
+            android:layout_width="220dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_edittext_normal"
+            android:cursorVisible="true"
+            android:hint="@string/dt_nasc"
+            android:inputType="date"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/black_clear"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.356"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_dgt_cpf" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txt_dt_admso"
+            android:layout_width="220dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_edittext_normal"
+            android:cursorVisible="true"
+            android:hint="@string/dt_admso"
+            android:inputType="date"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/black_clear"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.356"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_dt_nasc" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txt_new_password"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_edittext_normal"
+            android:cursorVisible="true"
+            android:hint="@string/new_password"
+            android:inputType="textPassword"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/black_clear"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_dt_admso" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txt_confirm_password"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_edittext_normal"
+            android:cursorVisible="true"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/black_clear"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_new_password" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="167dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="60dp"
+            android:background="@color/black_clear"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_confirm_password"
+            app:layout_constraintVertical_bias="0.009" />
+
+        <ImageView
+            android:id="@+id/img_calendar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_dt_nasc"
+            app:layout_constraintEnd_toEndOf="@+id/txt_dt_nasc"
+            app:layout_constraintTop_toTopOf="@+id/txt_dt_nasc"
+            app:srcCompat="@drawable/ic_calendar" />
+
+        <ImageView
+            android:id="@+id/img_calendar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_dt_admso"
+            app:layout_constraintEnd_toEndOf="@+id/txt_dt_admso"
+            app:layout_constraintTop_toTopOf="@+id/txt_dt_admso"
+            app:srcCompat="@drawable/ic_calendar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

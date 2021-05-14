@@ -30,12 +30,13 @@ public class MainAdmActivity extends AppCompatActivity {
         btnTarefas = (Button) findViewById(R.id.tarefasFragment);
         btnMenu = (Button) findViewById(R.id.maisFragment);
     }
-
+  
     //Aqui eu coloco o comando que seria (activity onde estamos).this e depois a activity que queremos abrir
     public void BtnFolga(View v){
         Intent in = new Intent(MainAdmActivity.this, folgas.class);
         startActivity(in);
     }
+
 
     public void BtnTarefas(View v){
         Intent in = new Intent(MainAdmActivity.this, Atividades.class);
