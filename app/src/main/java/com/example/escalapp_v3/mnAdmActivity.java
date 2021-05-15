@@ -17,12 +17,27 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.jetbrains.annotations.NotNull;
 
-public class mnAdmActivity extends AppCompatActivity {
+public class mnAdmActivity extends AppCompatActivity implements View.OnClickListener {
+
+    public CardView card4, card5, card6, card7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mn_adm);
+
+        card4 = (CardView) findViewById(R.id.adm_cardCont);
+        card5 = (CardView) findViewById(R.id.adm_cardPassword);
+        card6 = (CardView) findViewById(R.id.adm_cardFunc);
+        card7 = (CardView) findViewById(R.id.adm_cardAtividades);
+
+        card4.setOnClickListener(this);
+        card5.setOnClickListener(this);
+        card6.setOnClickListener(this);
+        card7.setOnClickListener(this);
+
+        //Barra de Navegação
+        //Ela quem puxa e deixa clicado
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
 
@@ -56,5 +71,32 @@ public class mnAdmActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent i;
+
+        switch (v.getId()) {
+            case R.id.adm_cardCont:
+                i = new Intent(this, MyAccount.class);
+                startActivity(i);
+                break;
+
+            case R.id.adm_cardPassword:
+                i = new Intent(this, AlterarSenha.class);
+                startActivity(i);
+                break;
+
+            case R.id.adm_cardFunc:
+                i = new Intent(this, ListFunc.class);
+                startActivity(i);
+                break;
+
+            case R.id.adm_cardAtividades:
+                i = new Intent(this, AtividadesActivity.class);
+                startActivity(i);
+                break;
+        }
     }
 }
