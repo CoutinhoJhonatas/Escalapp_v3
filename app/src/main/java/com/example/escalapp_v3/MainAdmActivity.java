@@ -2,6 +2,7 @@ package com.example.escalapp_v3;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
@@ -16,12 +17,22 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.jetbrains.annotations.NotNull;
 
-public class MainAdmActivity extends AppCompatActivity {
+public class MainAdmActivity extends AppCompatActivity implements View.OnClickListener {
+
+    public CardView card1, card2, card3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_adm);
+
+        card1 = (CardView) findViewById(R.id.cardFolgas);
+        card2 = (CardView) findViewById(R.id.cardAtividades);
+        card3 = (CardView) findViewById(R.id.cardMenu);
+
+        card1.setOnClickListener(this);
+        card2.setOnClickListener(this);
+        card3.setOnClickListener(this);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
 
@@ -52,5 +63,27 @@ public class MainAdmActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent i;
+
+        switch (v.getId()) {
+            case R.id.cardFolgas:
+                i = new Intent(this, folgas.class);
+                startActivity(i);
+                break;
+
+            case R.id.cardAtividades:
+                i = new Intent(this, Activity_list_atividades.class);
+                startActivity(i);
+                break;
+
+            case R.id.cardMenu:
+                i = new Intent(this, mnAdmActivity.class);
+                startActivity(i);
+                break;
+        }
     }
 }
