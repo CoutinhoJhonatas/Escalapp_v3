@@ -8,11 +8,8 @@ public class Atividades implements Serializable {
     private String responsavel;
     private Long id;
 
+
     public Atividades() {
-
-    }
-
-    public Atividades(String atividade, String responsavel) {
         this.atividade = atividade;
         this.responsavel = responsavel;
     }

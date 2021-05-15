@@ -5,7 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".activity.Activity_list_atividades">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/atividades" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
@@ -22,10 +33,14 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerList"
         android:layout_width="410dp"
-        android:layout_height="661dp"
+        android:layout_height="545dp"
+        android:layout_above="@+id/bottomNavigation"
+        android:layout_below="@+id/textView"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="22dp"
         android:layout_marginEnd="1dp"
+        android:layout_marginBottom="21dp"
+        android:background="#F8F8F8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,4 +57,19 @@
         android:clickable="true"
         app:fabSize="normal"
         app:srcCompat="@drawable/ic_mais" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="241dp"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="58dp"
+        android:layout_toEndOf="@+id/imageView4"
+        android:text="Atividades"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp" />
 </RelativeLayout>

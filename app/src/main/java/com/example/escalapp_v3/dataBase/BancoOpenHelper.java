@@ -14,7 +14,7 @@ public class BancoOpenHelper extends SQLiteOpenHelper {
     private static final String NOME_BANCO = "banco.db";
     public static final String TABELA = "atividades";
     private static final String ID = "id_ativ";
-    private static final int VERSAO = 6;
+    private static final int VERSAO = 8;
 
     public BancoOpenHelper(Context context){
         super(context, NOME_BANCO,null,VERSAO);
@@ -26,8 +26,7 @@ public class BancoOpenHelper extends SQLiteOpenHelper {
       //criando a tabela ativiadades
         String sql = "CREATE TABLE IF NOT EXISTS " + TABELA
                 + " (id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                " atividades TEXT NOT NULL, " +
-                " reponsavel TEXT NOT NULL); ";
+                " atividades TEXT NOT NULL); ";
 
         try {
 
@@ -39,8 +38,6 @@ public class BancoOpenHelper extends SQLiteOpenHelper {
             Log.i("INFO BD", "Erro ao criar a tabela" + e.getMessage());
         }
 
-
-        db.execSQL(sql);
   }
 
   @Override

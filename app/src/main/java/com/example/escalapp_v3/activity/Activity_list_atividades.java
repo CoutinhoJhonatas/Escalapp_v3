@@ -77,7 +77,7 @@ public class Activity_list_atividades extends AppCompatActivity {
 
 
         //Listagem de filmes
-        //this.criarAtiv();
+        this.criarAtiv();
 
         //Configurar adapter
         Adapter adapter = new Adapter(listaAtiv);

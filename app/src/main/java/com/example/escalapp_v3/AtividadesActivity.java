@@ -48,12 +48,11 @@ public class AtividadesActivity extends AppCompatActivity implements View.OnClic
                 Atividades responsavel = new Atividades();
 
                 String nomeAtiv = editAtividade.getText().toString();
-                String nomeRespon = editResponsavel.getText().toString();
 
                 atividade.setAtividade(nomeAtiv);
-                responsavel.setResponsavel(nomeRespon);
                 bancoController.salvar(atividade);
-                bancoController.salvar(responsavel);
+                Intent intent = new Intent(getApplicationContext(), mnAdmActivity.class);
+                startActivity(intent);
 
                 /*
                 BancoController crud = new BancoController(getBaseContext());
@@ -72,7 +71,6 @@ public class AtividadesActivity extends AppCompatActivity implements View.OnClic
 
 
         }
-    }
 
     @Override
     public void onClick(View v) {

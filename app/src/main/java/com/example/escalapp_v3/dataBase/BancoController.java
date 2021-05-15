@@ -28,9 +28,7 @@ public class BancoController implements IBancoController {
    public boolean salvar(Atividades atividades) {
 
       ContentValues cv = new ContentValues();
-      ContentValues cv2 = new ContentValues();
       cv.put("atividades", atividades.getAtividade());
-      cv2.put("responsavel", atividades.getResponsavel());
 
       try {
 
@@ -69,11 +67,9 @@ public class BancoController implements IBancoController {
 
          Long id = c.getLong(c.getColumnIndex("id"));
          String nomeAtiv = c.getString(c.getColumnIndex("atividades"));
-         String nomeRespon = c.getString(c.getColumnIndex("responsavel"));
 
          atividade.setId(id);
          atividade.setAtividade(nomeAtiv);
-         atividade.setResponsavel(nomeRespon);
 
          atividades.add(atividade);
 
