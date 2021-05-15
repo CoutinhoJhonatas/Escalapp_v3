@@ -73,10 +73,8 @@ public class Activity_list_atividades extends AppCompatActivity {
         });
 
         recyclerView = findViewById(R.id.recyclerList);
-
-
-
-        //Listagem de filmes
+        
+        //Listagem de atividades
         this.criarAtiv();
 
         //Configurar adapter
