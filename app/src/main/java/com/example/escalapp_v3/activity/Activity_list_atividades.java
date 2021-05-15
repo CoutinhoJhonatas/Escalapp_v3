@@ -73,7 +73,7 @@ public class Activity_list_atividades extends AppCompatActivity {
         });
 
         recyclerView = findViewById(R.id.recyclerList);
-        
+
         //Listagem de atividades
         this.criarAtiv();
 
