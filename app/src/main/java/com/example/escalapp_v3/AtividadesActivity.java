@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.escalapp_v3.dataBase.BancoController;
+import com.example.escalapp_v3.model.Atividades;
 
 public class AtividadesActivity extends AppCompatActivity {
 
@@ -34,26 +35,18 @@ public class AtividadesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences preferences = getSharedPreferences(ARQUIVO_PREFERENCIA, 0);
-                SharedPreferences preferences2 = getSharedPreferences(ARQUIVO_PREFERENCIA2, 0);
-                SharedPreferences.Editor editor = preferences.edit();
-                SharedPreferences.Editor editor2 = preferences2.edit();
+                BancoController bancoController = new BancoController(getApplicationContext());
 
-                //Validar o nome
+                Atividades atividade = new Atividades();
+                Atividades responsavel = new Atividades();
 
-                if (editAtividade.getText().toString().equals("") && editResponsavel.getText().toString().equals("")) {
+                String nomeAtiv = editAtividade.getText().toString();
+                String nomeRespon = editResponsavel.getText().toString();
 
-                    Toast.makeText(getApplicationContext(), "Preencha o campo vazio", Toast.LENGTH_LONG).show();
-                }
-                else {
-
-                    String atividade = editAtividade.getText().toString();
-                    String responsavel = editResponsavel.getText().toString();
-                    editor.putString("atividade", atividade);
-                    editor2.putString("responsavel", responsavel);
-                    editor.commit();
-                    editor2.commit();
-                }
+                atividade.setAtividade(nomeAtiv);
+                responsavel.setResponsavel(nomeRespon);
+                bancoController.salvar(atividade);
+                bancoController.salvar(responsavel);
 
                 /*
                 BancoController crud = new BancoController(getBaseContext());
@@ -70,16 +63,6 @@ public class AtividadesActivity extends AppCompatActivity {
             }
         });
 
-        //Recuperar dados salvos
-
-        SharedPreferences preferences = getSharedPreferences(ARQUIVO_PREFERENCIA, 0);
-        SharedPreferences preferences2 = getSharedPreferences(ARQUIVO_PREFERENCIA2, 0);
-
-        if (preferences.contains("atividade") && preferences2.contains("responsavel")) {
-
-            String atividade = preferences.getString("atividade", "");
-            String reponsavel = preferences.getString("responsavel", "");
 
         }
     }
-}

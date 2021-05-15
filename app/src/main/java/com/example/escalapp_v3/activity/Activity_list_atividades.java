@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -17,6 +18,8 @@ import com.example.escalapp_v3.MainActivity;
 import com.example.escalapp_v3.MainAdmActivity;
 import com.example.escalapp_v3.R;
 import com.example.escalapp_v3.adapter.Adapter;
+import com.example.escalapp_v3.dataBase.BancoController;
+import com.example.escalapp_v3.dataBase.BancoOpenHelper;
 import com.example.escalapp_v3.folgas;
 import com.example.escalapp_v3.mnAdmActivity;
 import com.example.escalapp_v3.mnFuncionario;
@@ -71,6 +74,8 @@ public class Activity_list_atividades extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerList);
 
+
+
         //Listagem de filmes
         //this.criarAtiv();
 
@@ -104,15 +109,8 @@ public class Activity_list_atividades extends AppCompatActivity {
 
     public void criarAtiv(){
 
-
-        Atividades atividades = new Atividades("Atividade1", "Responsável1");
-        this.listaAtiv.add(atividades);
-
-        atividades = new Atividades("Atividade2", "Responsável2");
-        this.listaAtiv.add(atividades);
-
-        atividades = new Atividades("Atividade3", "Responsável3");
-        this.listaAtiv.add(atividades);
+        BancoController bancoController = new BancoController(getApplicationContext());
+        listaAtiv = bancoController.listar();
 
 
     }
