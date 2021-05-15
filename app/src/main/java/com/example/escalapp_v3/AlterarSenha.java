@@ -1,31 +1,33 @@
 package com.example.escalapp_v3;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatEditText;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
-import com.example.escalapp_v3.R;
-
-public class AlterarSenha extends AppCompatActivity implements View.OnClickListener{
-
-    Button btnAltSenha;
-    AppCompatEditText txtPassword, txtConPassword;
+public class AlterarSenha extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recuperar_senha);
+        setContentView(R.layout.activity_alterar_senha);
 
-        txtPassword = findViewById(R.id.txt_password);
-        txtConPassword = findViewById(R.id.txt_confirm_password);
+        ImageButton voltarTl = (ImageButton) findViewById(R.id.btnBackAtv);
 
-        btnAltSenha.setOnClickListener(this);
+        voltarTl.setOnClickListener(this);
     }
 
+    @Override
     public void onClick(View v) {
 
+        switch (v.getId()){
+            case R.id.btnBackAtv:
+                Intent it = new Intent(this, MainAdmActivity.class);
+                startActivity(it);
+                break;
+        }
     }
 }
