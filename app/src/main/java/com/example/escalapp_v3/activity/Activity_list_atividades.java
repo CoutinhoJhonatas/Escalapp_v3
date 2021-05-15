@@ -9,8 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.LinearLayout;
 
+import com.example.escalapp_v3.AtividadesActivity;
 import com.example.escalapp_v3.MainActivity;
 import com.example.escalapp_v3.MainAdmActivity;
 import com.example.escalapp_v3.R;
@@ -20,6 +22,7 @@ import com.example.escalapp_v3.mnAdmActivity;
 import com.example.escalapp_v3.mnFuncionario;
 import com.example.escalapp_v3.model.Atividades;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -69,7 +72,7 @@ public class Activity_list_atividades extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerList);
 
         //Listagem de filmes
-        this.criarAtiv();
+        //this.criarAtiv();
 
         //Configurar adapter
         Adapter adapter = new Adapter(listaAtiv);
@@ -80,9 +83,27 @@ public class Activity_list_atividades extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayout.VERTICAL));
         recyclerView.setAdapter(adapter);
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), AtividadesActivity.class);
+                startActivity(intent);
+
+            }
+        });
+    }
+
+    @Override
+    protected void onStart() {
+        criarAtiv();
+        super.onStart();
     }
 
     public void criarAtiv(){
+
 
         Atividades atividades = new Atividades("Atividade1", "Responsável1");
         this.listaAtiv.add(atividades);
@@ -92,6 +113,7 @@ public class Activity_list_atividades extends AppCompatActivity {
 
         atividades = new Atividades("Atividade3", "Responsável3");
         this.listaAtiv.add(atividades);
+
 
     }
 }

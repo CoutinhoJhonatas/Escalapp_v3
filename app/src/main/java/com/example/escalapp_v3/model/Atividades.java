@@ -1,9 +1,12 @@
 package com.example.escalapp_v3.model;
 
-public class Atividades {
+import java.io.Serializable;
+
+public class Atividades implements Serializable {
 
     private String atividade;
     private String responsavel;
+    private Long id;
 
     public Atividades() {
 
@@ -28,5 +31,13 @@ public class Atividades {
 
     public void setResponsavel(String responsavel) {
         this.responsavel = responsavel;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

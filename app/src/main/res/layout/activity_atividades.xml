@@ -49,9 +49,9 @@
         android:layout_height="40dp"
         android:layout_marginTop="14dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Descreva a Atividade"
+        android:hint="Descreva a Atividade"
 
+        android:inputType="textPersonName"
         android:textColor="@color/textGrey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,9 +63,9 @@
         android:layout_height="40dp"
         android:layout_marginTop="12dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text=" Digite o nome do Responsável"
+        android:hint=" Digite o nome do Responsável"
 
+        android:inputType="textPersonName"
         android:textColor="@color/textGrey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
