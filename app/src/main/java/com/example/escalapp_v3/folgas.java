@@ -1,45 +1,56 @@
 package com.example.escalapp_v3;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.escalapp_v3.activity.Activity_list_atividades;
 import com.example.escalapp_v3.model.Atividades;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import org.jetbrains.annotations.NotNull;
 
 public class folgas extends AppCompatActivity {
-
-    // Estrutura para navegar entre telas
-
-    Button btnHome, btnFolga, btnTarefas, btnMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_folgas);
 
-        //homeFragment, folgasFragment... foram criados para navegação usando Fragment mas deu errado, porem recliclei os id criados para declarar aqui
-        btnHome = (Button) findViewById(R.id.homeFragment);
-        btnFolga = (Button) findViewById(R.id.folgasFragment);
-        btnTarefas = (Button) findViewById(R.id.tarefasFragment);
-        btnMenu = (Button) findViewById(R.id.maisFragment);
-    }
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
 
-    //Aqui eu coloco o comando que seria (activity onde estamos).this e depois a activity que queremos abrir
-    public void BtnHome(View v){
-        Intent in = new Intent(folgas.this, MainActivity.class);
-        startActivity(in);
-    }
+        bottomNavigationView.setSelectedItemId(R.id.folgasFragment);
 
-    public void BtnTarefas(View v){
-        Intent in = new Intent(folgas.this, Atividades.class);
-        startActivity(in);
-    }
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.homeFragment:
+                        startActivity(new Intent(getApplicationContext()
+                                ,MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.folgasFragment:
+                        return true;
+                    case R.id.tarefasFragment:
+                        startActivity(new Intent(getApplicationContext()
+                                , Activity_list_atividades.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.maisFragment:
+                        startActivity(new Intent(getApplicationContext()
+                                ,mnAdmActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+                return false;
+            }
+        });
 
-    public void BtnMenu(View v){
-        Intent in = new Intent(folgas.this, mnFuncionario.class);
-        startActivity(in);
     }
 }
